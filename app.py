@@ -35,7 +35,7 @@ except LookupError:
 
 # Set page config
 st.set_page_config(
-    page_title="Spam Email Classifier",
+    page_title="Spam Email Detection",
     page_icon="📧",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -225,7 +225,7 @@ def create_visualizations(df, classifier):
                 st.error(f"Evaluation error: {str(e)}")
 
 def main():
-    st.markdown('<h1 class="main-header">📧 Spam Email Classifier</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">📧 Spam Email Detection</h1>', unsafe_allow_html=True)
     if 'classifier' not in st.session_state:
         st.session_state.classifier = SpamClassifier()
     classifier = st.session_state.classifier
@@ -326,3 +326,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
